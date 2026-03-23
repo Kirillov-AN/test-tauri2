@@ -39,7 +39,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
-          #cache: 'pnpm' # Set this to npm, yarn or pnpm.
+          cache: 'pnpm' # Set this to npm, yarn or pnpm.
+          cache-dependency-path: pnpm-lock.yaml
+
+      - name: setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+          run_install: false
+
 
       - name: install Rust stable
         uses: dtolnay/rust-toolchain@stable # Set this to dtolnay/rust-toolchain@nightly
