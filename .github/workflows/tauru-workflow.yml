@@ -39,8 +39,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
-          cache: 'pnpm' # Set this to npm, yarn or pnpm.
-          cache-dependency-path: pnpm-lock.yaml
+#          cache: 'pnpm' # Set this to npm, yarn or pnpm.
+#          cache-dependency-path: pnpm-lock.yaml
 
       - name: setup pnpm
         uses: pnpm/action-setup@v4
